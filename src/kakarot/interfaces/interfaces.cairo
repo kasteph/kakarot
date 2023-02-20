@@ -15,11 +15,23 @@ namespace IBlockhashRegistry {
 
 @contract_interface
 namespace IEth {
+    func totalSupply() -> (supply: Uint256) {
+    }
     func balanceOf(account: felt) -> (balance: Uint256) {
+    }
+    func allowance(owner: felt, spender: felt) -> (allowance: Uint256) {
     }
 
     func transfer(recipient: felt, amount: Uint256) -> (success: felt) {
     }
+    func approve(spender: felt, amount: Uint256) -> (success: felt) {
+    }
+    func transferFrom(sender: felt, recipient: felt, amount: Uint256) -> (success: felt) {
+    }
+
+    // TODO:
+    // event Approval(address indexed owner, address indexed spender, uint value);
+    // event Transfer(address indexed from, address indexed to, uint value);
 }
 
 @contract_interface
